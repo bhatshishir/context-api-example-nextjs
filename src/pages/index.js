@@ -4,17 +4,23 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 // import Navbar from "@/components/navbar";
 import Link from "next/link";
+import { CssBaseline, Button } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-      {/* <Navbar /> */}
-      <h1>My App!</h1>
-      <Link href="./shoppingList">
-        <button>shoppingList</button>
-      </Link>
+      <CssBaseline />
+      <section style={{ paddingTop: 70 }}>
+        <h1>My App!</h1>
+        <Link href="./shoppingList">
+          <Button color="success" variant="contained">
+            ShoppingList
+          </Button>
+          {/* <button>shoppingList</button> */}
+        </Link>
+      </section>
     </>
   );
 }
