@@ -20,10 +20,8 @@ export default function App({ Component, pageProps }) {
     <cartContext.Provider value={{ total, items, setItems }}>
       <CssBaseline />
 
-      <AppBar>
-        <Toolbar>
-          <Navbar />
-        </Toolbar>
+      <AppBar position="relative">
+        <Navbar />
       </AppBar>
 
       <Component {...pageProps} />
